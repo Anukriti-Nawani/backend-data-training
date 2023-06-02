@@ -1,0 +1,64 @@
+GET http://localhost:3000/posts
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkphaSIsImlhdCI6MTY4NTcyMTA3MX0.w4wc3OZz-PcqSgpiPvzJlyx32e0ZV2IZnFMZIwwziZY
+{
+    "username": "ankita",
+    "title" : "my first post"
+}
+
+###
+
+# Update Post
+PUT http://localhost:3000/posts/647767c98ff0ccb90dc913fd
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkphaSIsImlhdCI6MTY4NTcyMDUwOX0.VE-rElmX6sv4feJd0-uKOfGbGEo1GoCFrP708l1DGMg
+
+{
+  "username": "heenal",
+  "title": "Updated Post Title",
+
+}
+
+
+###
+
+# Delete Post
+DELETE http://localhost:3000/posts/647647308ff0ccb90dc913fc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkphaSIsImlhdCI6MTY4NTYzODk2OX0.RjmVorRYIkX6nvuj2bAhh0m095jB_Zy5HAjOD8Z8EAM
+
+
+###
+
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkphaSIsImlhdCI6MTY4NTU1MzkxNX0.Lwfwi667M-5EjOeH4xubmHhtH3f_VZD687NYuB9nVIU"
+}
+
+###
+
+POST http://localhost:3000/auth/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjg1MTI0MzYxfQ.COE-YHXcI6m3AqlFOhVngxuIQJi10fMd7C_DPo5X3xc"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "Jai",
+  "password": "passwordjai"
+}
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "username": "Jai",
+  "password": "passwordjai"
+}
