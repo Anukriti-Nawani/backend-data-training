@@ -1,20 +1,17 @@
 GET http://localhost:3000/posts
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkphaSIsImlhdCI6MTY4NTcyMTA3MX0.w4wc3OZz-PcqSgpiPvzJlyx32e0ZV2IZnFMZIwwziZY
-{
-    "username": "ankita",
-    "title" : "my first post"
-}
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkphaSIsImlhdCI6MTY4NTg2NzM5OH0.pnz3Y5-RxJV7rAsiqRAtLbZHg7CFmEIRemlx7-SrYIA
+
 
 ###
 
 # Update Post
-PUT http://localhost:3000/posts/647767c98ff0ccb90dc913fd
+PUT http://localhost:3000/posts/647c4b9f560a9d8da43efd4b
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkphaSIsImlhdCI6MTY4NTcyMDUwOX0.VE-rElmX6sv4feJd0-uKOfGbGEo1GoCFrP708l1DGMg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkphaSIsImlhdCI6MTY4NTg2NzI4Mn0.tWAEDFDLa4T8IRL28e78xFCwuKpkgijK2sLWuz3wxHY
 
 {
-  "username": "heenal",
-  "title": "Updated Post Title",
+  "username": "jai",
+  "title": "Updated Post Title anukriti"
 
 }
 
@@ -22,8 +19,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha
 ###
 
 # Delete Post
-DELETE http://localhost:3000/posts/647647308ff0ccb90dc913fc
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkphaSIsImlhdCI6MTY4NTYzODk2OX0.RjmVorRYIkX6nvuj2bAhh0m095jB_Zy5HAjOD8Z8EAM
+DELETE http://localhost:3000/posts/647b6520560a9d8da43efd46
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkphaSIsImlhdCI6MTY4NTg2NzI4Mn0.tWAEDFDLa4T8IRL28e78xFCwuKpkgijK2sLWuz3wxHY
 
 
 ###
