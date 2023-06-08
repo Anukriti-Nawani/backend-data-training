@@ -1,0 +1,118 @@
+### User Registration
+
+POST http://localhost:6000/auth/register
+Content-Type: application/json
+
+{
+  "username": "john.doe",
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+
+
+### User Login
+
+POST http://localhost:6000/auth/login
+Content-Type: application/json
+
+{
+  "username": "john.doe",
+  "password": "password123"
+}
+
+
+### Get User by ID
+
+GET http://localhost:6000/auth/647d9897d0710f070ae08a4d
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDdkOTg5N2QwNzEwZjA3MGFlMDhhNGQiLCJpYXQiOjE2ODU5NTQ2Mjl9.XvHlz-K-Ig4LEXPl1Zj2iakW-BEwThuF6ykGf2hBPCI
+
+
+### Update User by ID
+
+PUT http://localhost:6000/auth/647d9897d0710f070ae08a4d
+
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDdkOTg5N2QwNzEwZjA3MGFlMDhhNGQiLCJpYXQiOjE2ODU5NTQ2Mjl9.XvHlz-K-Ig4LEXPl1Zj2iakW-BEwThuF6ykGf2hBPCI
+
+{
+  "username": "johndoe",
+  "email": "johndoe@example.com"
+}
+
+
+### Delete User by ID
+
+DELETE http://localhost:6000/auth/647d9897d0710f070ae08a4d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDdkOTg5N2QwNzEwZjA3MGFlMDhhNGQiLCJpYXQiOjE2ODU5NTQ2Mjl9.XvHlz-K-Ig4LEXPl1Zj2iakW-BEwThuF6ykGf2hBPCI
+
+
+### Create Blog Post
+
+POST http://localhost:6000/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDdkOTg5N2QwNzEwZjA3MGFlMDhhNGQiLCJpYXQiOjE2ODYxMzIyMDksImV4cCI6MTY4NjEzMzEwOX0.EAgFpnuKRWsqroEzp7qcpXLd_xrsEBHikEvD2cXpP0o
+
+{
+  "title": "My ninth Blog Post",
+  "content": "This is my ninth blog post."
+}
+
+
+### Get All Blog Posts
+
+GET http://localhost:6000/blogs
+
+
+### Get Blog Post by ID
+
+GET http://localhost:6000/blogs/64801ab8771df545a4dcdd16
+
+
+### Update Blog Post
+
+PUT http://localhost:6000/blogs/64801ab8771df545a4dcdd16
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDdkOTg5N2QwNzEwZjA3MGFlMDhhNGQiLCJpYXQiOjE2ODYxMzEzNTUsImV4cCI6MTY4NjEzMjI1NX0.a-QGkhFNL29d6rxkLCfoLP9SOAz-rdqcqyQfhlYFs0I
+
+{
+  "title": "Updated my second Blog Post Title to new",
+  "content": "This is an updated blog post for second."
+}
+
+
+### Delete Blog Post
+
+DELETE http://localhost:6000/blogs/647f40f7771df545a4dcdd12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDdkOTg5N2QwNzEwZjA3MGFlMDhhNGQiLCJpYXQiOjE2ODYxMTgyNzMsImV4cCI6MTY4NjExOTE3M30.49L2D4OICKSCf1oDZ9K-1UALAnpzwv1DBIlHCle3FOY
+
+
+### Create Comment
+
+POST http://localhost:6000/comments/64801ad9771df545a4dcdd1c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDdkOTg5N2QwNzEwZjA3MGFlMDhhNGQiLCJpYXQiOjE2ODYyMDc5MzcsImV4cCI6MTY4NjIwODgzN30.S8-Bhy14hELn6l0vSR5oI_Iz6U4v_Ldm2QixtVQV1hY
+
+{
+  "content": "Great blog post 3rd!"
+}
+### Get Comments for Blog Post
+
+GET http://localhost:6000/comments/64801ad9771df545a4dcdd1c
+
+
+### Update Comment
+
+PUT http://localhost:6000/comments/64817f579f5f1075684f6ce4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDdkOTg5N2QwNzEwZjA3MGFlMDhhNGQiLCJpYXQiOjE2ODYyMDc5MzcsImV4cCI6MTY4NjIwODgzN30.S8-Bhy14hELn6l0vSR5oI_Iz6U4v_Ldm2QixtVQV1hY
+
+{
+  "content": "Great blog post 3rd updated!"
+}
+
+
+### Delete Comment
+
+DELETE http://localhost:6000/comments/64817f579f5f1075684f6ce4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDdkOTg5N2QwNzEwZjA3MGFlMDhhNGQiLCJpYXQiOjE2ODYyMDg4NzcsImV4cCI6MTY4NjIwOTc3N30.FGWaKKRTWLo-s9JNwhIZWVtXfoVZCZxReFtKtGwAIOg
